@@ -7,6 +7,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>worldgdp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <spring.version>5.1.5.RELEASE</spring.version>
+    <junit.version>4.12</junit.version>
+    <assertj.version>3.12.0</assertj.version>
+    <h2.version>1.4.198</h2.version>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -55,7 +61,23 @@
       <artifactId>HikariCP</artifactId>
       <version>4.0.3</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>${h2.version}</version>
+    </dependency>
 
   </dependencies>
   <build>
