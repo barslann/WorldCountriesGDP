@@ -13,6 +13,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="worldgdp" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:7.0.1.Final" />
+          <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:3.0.0" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/worldgdp/META-INF/MANIFEST.MF" />

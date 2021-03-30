@@ -1,21 +1,23 @@
 package com.coderman.worldgdp.model;
 
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
 public class Country {
-    private String code;
-    private String name;
-    private String continent;
-    private String region;
-    private Double surfaceArea;
+    @NotNull @Size(max = 3,min = 3) private String code;
+    @NotNull @Size(max = 52) private String name;
+    @NotNull private String continent;
+    @NotNull @Size(max = 26) private String region;
+    @NotNull private Double surfaceArea;
     private Short indepYear;
-    private Long population;
+    @NotNull private Long population;
     private Double lifeExpectancy;
     private Double gnp;
-    private String localName;
-    private String governmentForm;
+    @NotNull private String localName;
+    @NotNull private String governmentForm;
     private String headOfState;
     private City capital;
-    private String code2;
+    @NotNull private String code2;
 }
