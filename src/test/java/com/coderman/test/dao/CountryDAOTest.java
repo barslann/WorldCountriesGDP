@@ -40,12 +40,9 @@ public class CountryDAOTest {
         assertThat(countries).hasSize(20);
 
         Country c = countries.get(0);
-        assertThat(c.toString()).isEqualTo("Country(code=ABW, name=Aruba, "
-                + "continent=North America, region=Caribbean, surfaceArea=193.0, "
-                + "indepYear=0, population=103000, lifeExpectancy=78.4000015258789, "
-                + "gnp=828.0, localName=Aruba, governmentForm=Nonmetropolitan Territory of The Netherlands, "
-                + "headOfState=Beatrix, capital=City(id=129, name=Oranjestad, countryCode=null, "
-                + "country=null, district=null, population=null), code2=AW)");
+        assertThat(c.toString()).isEqualTo("Country{code='ABW', name='Aruba', continent='North America', region='Caribbean', surfaceArea=193.0, indepYear=0, population=103000, " +
+                "lifeExpectancy=78.4000015258789, gnp=828.0, localName='Aruba', governmentForm='Nonmetropolitan Territory of The Netherlands', headOfState='Beatrix', " +
+                "capital=City{id=129, name='Oranjestad', countryCode='null', country=null, district='null', population=null}, code2='AW'}");
     }
 
     @Test
@@ -70,13 +67,12 @@ public class CountryDAOTest {
     public void testGetCountryDetail() {
         Country c = countryDao.getCountryDetail("IND");
         assertThat(c).isNotNull();
-        assertThat(c.toString()).isEqualTo("Country(code=IND, name=India, "
-                + "continent=Asia, region=Southern and Central Asia, "
-                + "surfaceArea=3287263.0, indepYear=1947, population=1013662000, "
-                + "lifeExpectancy=62.5, gnp=447114.0, localName=Bharat/India, "
-                + "governmentForm=Federal Republic, headOfState=Kocheril Raman Narayanan, "
-                + "capital=City(id=1109, name=New Delhi, countryCode=null, "
-                + "country=null, district=null, population=null), code2=IN)");
+        assertThat(c.toString()).isEqualTo("Country{code='IND', name='India', continent='Asia', region='Southern and Central Asia', " +
+                "surfaceArea=3287263.0, indepYear=1947, population=1013662000, lifeExpectancy=62.5, " +
+                "gnp=447114.0, localName='Bharat/India', governmentForm='Federal Republic', " +
+                "headOfState='Kocheril Raman Narayanan', capital=City{id=1109, name='New Delhi', " +
+                "countryCode='null', country=null, district='null', population=null}, code2='IN'}"
+        );
     }
 
     @Test public void testEditCountryDetail() {

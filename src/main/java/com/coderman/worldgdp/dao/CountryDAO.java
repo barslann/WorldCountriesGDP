@@ -5,6 +5,7 @@ import com.coderman.worldgdp.model.Country;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -14,6 +15,7 @@ import java.util.Map;
 
 @Service
 @Setter
+@Component
 public class CountryDAO {
 
     @Autowired

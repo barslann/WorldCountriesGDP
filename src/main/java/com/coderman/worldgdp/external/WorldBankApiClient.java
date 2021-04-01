@@ -9,9 +9,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
 
+@Service
 public class WorldBankApiClient {
     String GDP_URL = "http://api.worldbank.org/v2/country/%s?format=json&date=2008:2018";
 
